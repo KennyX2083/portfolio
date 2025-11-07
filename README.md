@@ -22,7 +22,7 @@ A personal portfolio website designed in the style of the **Valorant home screen
 
 ## 📂 Project Structure
 
-/media: Background video and images
-/styles: CSS files (split into general, background, intro-screen)
-script.js: Smooth scrolling + intro logic
+/media: Background video and images  
+/styles: CSS files (split into general, background, intro-screen)  
+script.js: Smooth scrolling + intro logic  
 index.html: Main page
