@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valorant Style Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="/styles/style.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <video autoplay loop muted playsinline id="bg-video"
+  disablePictureInPicture
+  controlsList="nodownload nofullscreen noremoteplayback">
+    <source src="/media/iso-vid.mp4" type="video/mp4">
+  </video>
+
+  <div id="bg-video-overlay"></div>
+  <div id="bg-video-vignette"></div>
+
+  <div id="intro-screen">
+    <div class="intro-content">
+      <h1 class="intro-title iso-glow">WELCOME</h1>
+      <p class="intro-prompt">PRESS ANY KEY TO CONTINUE</p>
+    </div>
+  </div>
+
+  <header id="home">
+    <nav>
+      <button class="nav-btn" onclick="smoothScroll('about', event)">About</button>
+      <button class="nav-btn" onclick="smoothScroll('projects', event)">Projects</button>
+      <button class="nav-btn" onclick="smoothScroll('background', event)">Background</button>
+      <button class="nav-btn" onclick="smoothScroll('contact', event)">Contact</button>
+    </nav>
+  </header>
+
+  <div class="welcome-panel">
+    <div class="welcome-card">
+      <h2>WELCOME</h2>
+      <p>Thanks for stopping by - explore my projects, skills, and experiences</p>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="about-content">
+      <div class="about-image">
+        <img src="/media/profile.jpg" alt="self image"/>
+      </div>
+      
+      <div class="about-text">
+        <h1>About Me</h1>
+        <p>
+          Hi, I'm Jerry. I'm a Computer Science student at Columbia University with a minor in Economics. Growing up, I worked in many
+          different Chinese owned restaurants, both my family's restaurant and also family friends. I helped with packing orders,
+          setting up tables, taking calls, and other necessary tasks. It was a fast-paced and hands-on environment that taught me
+          responsibility and how to stay calm under pressure, while working in different restaurants often made me learn how to adapt
+          to new environments.
+
+          <br> I bring these skills into my work today. Whether I'm managing my time for my coursework, debugging my code, or trying to
+          design a new feature, I always stay calm and try to bring myself to work for the best result possible. In my free time, I enjoy
+          games of any kind, volleyball, star/moon-gazing (not very easy to do in NYC), and trying to think of fun ideas to turn into reality.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h1>Projects</h1>
+    <p>Showcase your coolest work – coding projects, UI/UX designs, videos, clips, game work, etc.</p>
+  </section>
+
+  <section id="background">
+  <h1>Background</h1>
+
+    <div class="background-grid">
+      <!-- Coursework -->
+      <div class="background-card">
+        <h2>Relevant Coursework (for Major)</h2>
+        <ul class="background-list">
+          <li>Intro to Programming in Java</li>
+          <li>Intro to Programming in Python</li>
+          <li>Data Structures in Java</li>
+          <li>Advanced Programming</li>
+          <li>Linear Algebra</li>
+        </ul>
+      </div>
+
+      <div class="background-card">
+        <h2>Relevant Coursework (for Minor)</h2>
+        <ul class="background-list">
+          <li>Principles of Economics</li>
+          <li>Intermediate Macroeconomics</li>
+        </ul>
+      </div>
+
+      <!-- Tech Stack -->
+      <div class="background-card">
+        <h2>Tech Stack</h2>
+        <ul class="background-list">
+          <li><span class="highlight">Languages:</span> Java, Python, C, HTML, CSS, JavaScript, SQL</li>
+          <li><span class="highlight">Frameworks:</span> React, Tailwind CSS</li>
+          <li><span class="highlight">Tools:</span> Git, VS Code, Linux, Microsoft Office, Eclipse IDE</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h1>Contact</h1>  
+
+    <div class="contact-card">
+      <div class="contact-header">
+        <h2>LET'S GET IN TOUCH</h2>
+      </div>
+
+      <div class="contact-divider"></div>
+
+      <div class="contact-links">
+        <a href="mailto:jz3894@columbia.edu" target="_blank" class="contact-link">
+          <i class="fa-solid fa-envelope"></i> jz3894@columbia.edu
+        </a>
+        <a href="https://github.com/KennyX2083" target="_blank" class="contact-link">
+          <i class="fa-brands fa-github"></i> github.com/KennyX2083
+        </a>
+        <a href="https://www.linkedin.com/in/zhengj2083" target="_blank" class="contact-link">
+          <i class="fa-brands fa-linkedin"></i> linkedin.com/in/zhengj2083
+        </a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

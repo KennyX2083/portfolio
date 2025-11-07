@@ -1,0 +1,81 @@
+/* Fullscreen intro overlay */
+#intro-screen {
+  position: fixed;
+  inset: 0;
+  background: #0d0d0d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1s ease;
+  pointer-events: auto;
+  cursor: default;
+}
+
+#intro-screen.ready {
+  cursor: pointer;
+}
+
+/* Text layout */
+.intro-content {
+  text-align: center;
+  animation: fadePop 1.2s ease forwards;
+}
+
+#intro-screen:hover .intro-content {
+  transform: translateY(-4px);
+  transition: transform 0.3s ease;
+}
+
+.intro-title {
+  font-size: 4rem;
+  color: #ff4655; /* or #d341ff for Clove theme */
+  letter-spacing: 8px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+/* Iso Hard-Light */
+.iso-glow {
+  position: relative;
+  color: #c084ff; /* Core Iso purple */
+  text-shadow: 0 0 8px rgba(192, 132, 255, 0.35), 0 0 18px rgba(192, 132, 255, 0.22), 0 0 30px rgba(192, 132, 255, 0.15);
+  transition: text-shadow 0.4s cubic-bezier(0.17, 0.84, 0.44, 1), transform 0.4s cubic-bezier(0.17, 0.84, 0.44, 1);
+}
+
+/* Hover = Lift + Slightly Brighter Glow */
+#intro-screen.ready:hover .iso-glow {
+  transform: translateY(-4px); /* subtle float */
+  text-shadow: 0 0 14px rgba(192, 132, 255, 0.55), 0 0 32px rgba(192, 132, 255, 0.32), 0 0 50px rgba(192, 132, 255, 0.22);
+}
+
+/* Blinking press message */
+.intro-prompt {
+  font-size: 1.2rem;
+  color: #e5e5e5;
+  opacity: 0.6;
+  animation: blink 1.5s infinite;
+  transition: opacity 0.3s ease;
+}
+
+#intro-screen:hover .intro-prompt {
+  opacity: 1;
+}
+
+/* Fade-up intro effect */
+@keyframes fadePop {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Blinking text animation */
+@keyframes blink {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 1; }
+}
+
+html.no-scroll, body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}

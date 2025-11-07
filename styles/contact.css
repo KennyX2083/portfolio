@@ -1,0 +1,104 @@
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem;
+}
+
+.contact-card {
+  background: rgba(10, 10, 15, 0.75);
+  border: 2px solid rgba(192, 132, 255, 0.25);
+  box-shadow: 0 0 25px rgba(192, 132, 255, 0.2), inset 0 0 15px rgba(192, 132, 255, 0.05);
+  backdrop-filter: blur(8px);
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  width: min(90%, 600px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 35px rgba(192, 132, 255, 0.4),
+    inset 0 0 15px rgba(192, 132, 255, 0.08);
+}
+
+/* ISO hard-light divider (constant glow) */
+.contact-divider {
+  width: 80%;
+  height: 2px;
+  margin: 1.5rem auto 2rem;
+  background: linear-gradient(90deg, rgba(192,132,255,0) 0%, rgba(192,132,255,0.8) 50%, rgba(192,132,255,0) 100%);
+  box-shadow: 0 0 10px rgba(192,132,255,0.4), 0 0 25px rgba(192,132,255,0.25);
+  border-radius: 2px;
+}
+
+/* Card header */
+.contact-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-header h2 {
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+  color: #c084ff;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.contact-header p {
+  font-size: 1rem;
+  color: #d9d9d9;
+  opacity: 0.8;
+}
+
+/* Links */
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.contact-link {
+  color: #e5e5e5;
+  text-decoration: none;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.contact-link:hover {
+  color: #c084ff;
+  transform: translateX(6px);
+  text-shadow: 0 0 8px rgba(192, 132, 255, 0.5);
+}
+
+.contact-link i {
+  font-size: 1.3rem;
+  color: #c084ff;
+  transition: color 0.25s ease;
+}
+
+.contact-link:hover i {
+  color: #c084ff;
+}
+
+/* Responsive tweak */
+@media (max-width: 600px) {
+  .contact-card {
+    padding: 2rem;
+  }
+  .contact-links {
+    align-items: center;
+  }
+  .contact-link {
+    justify-content: center;
+  }
+}
+
