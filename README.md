@@ -1,5 +1,3 @@
-=======
-
 # Valorant-Themed Portfolio 🎯
 
 A personal portfolio website designed in the style of the **Valorant home screen** — featuring animated navigation buttons, a cinematic background video, and interactive sections for About, Projects, Background, and Contact.
